@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import BtnDarkMode from "../btnDarkMode/BtnDarkMode";
 import "./style.css"
+import mainStyle from "../../styles/main.module.css"
 
 const Navbar = () => {
     const activeLink = 'nav-list__link nav-list__link--active'
@@ -8,7 +9,7 @@ const Navbar = () => {
 
     return (
         <nav className="nav">
-            <div className="container">
+            <div className={mainStyle.container}>
                 <div className="nav-row">
                     <NavLink to="/" className="logo">
                         <strong>Freelancer</strong> portfolio

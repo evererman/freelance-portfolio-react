@@ -2,8 +2,8 @@ import { useState,  useEffect, useRef } from "react";
 import { useLocalStorage } from "../../utils/useLocalStorage";
 import sun from "./sun.svg";
 import moon from "./moon.svg";
-import "./style.css"
-
+import './style.css'
+import mainStyle from "../../styles/main.module.css"
 
 const BtnDarkMode = () => {
 
@@ -13,10 +13,10 @@ const BtnDarkMode = () => {
 
     useEffect(() => {
        if(darkMode === 'dark') {
-        document.body.classList.add('dark')
+        document.body.classList.add(mainStyle['dark'])
         btnRef.current.classList.add('dark-mode-btn--active')
        } else {
-        document.body.classList.remove('dark')
+        document.body.classList.remove(mainStyle['dark'])
         btnRef.current.classList.remove('dark-mode-btn--active')
        }
     },[darkMode])
