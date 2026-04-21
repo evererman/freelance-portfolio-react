@@ -1,4 +1,3 @@
-import "./styles/main.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
@@ -7,10 +6,11 @@ import Contacts from "./pages/Contacts";
 import SingleProject from "./pages/SingleProject";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./utils/scrollToTop"
+import mainStyle from "./styles/main.module.css";
 
 function App() {
     return (
-        <div className="App">
+        <div className={mainStyle.app}>
             <Router>
                 <Navbar />
                 <ScrollToTop />
